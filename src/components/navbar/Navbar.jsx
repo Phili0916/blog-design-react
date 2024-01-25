@@ -1,6 +1,6 @@
 import React from 'react'
 import './navbar.css'
-import profilePicture from './../images/prof_image.jpg'
+import profilePicture from '../../images/prof_image.jpg'
 
 const Navbar = () => {
   return (
@@ -20,7 +20,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className='navRight'>
-          <img className="navImage" src={profilePicture} alt="profile Image"/>
+          <img className="navImage" src={profilePicture} alt="profile"/>
           <i className=" navSearchIcon fa-solid fa-magnifying-glass"></i>
         </div>
     </div>

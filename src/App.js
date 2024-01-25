@@ -1,11 +1,12 @@
-import Navbar from "./navbar/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
+import SinglePage from "./pages/singlePage/SinglePage";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Home />
+      <SinglePage />
     </>
   );
 }

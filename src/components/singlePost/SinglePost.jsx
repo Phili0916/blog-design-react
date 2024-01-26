@@ -21,7 +21,7 @@ const SinglePost = () => {
                 <span className='singlePostAuthor'>Author: <b>Philip Davis</b></span>
                 <span className='singlePostDate'>2 hour ago</span>
             </div>
-            <p>
+            <p className='singlePostDescription'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sapiente, voluptatibus 
                 quam unde corrupti beatae, nemo nulla iure perferendis at ipsa veniam? Exercitationem 
                 quis iste iure cum nobis omnis perferendis.

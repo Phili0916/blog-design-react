@@ -38,3 +38,23 @@
 .singlePostIcon:last-child {
     color: #acb7ae;
 }
+
+.singlePostInfo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.singlePostDescription {
+    color:#3d7c47;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.singlePostDescription::first-letter {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}

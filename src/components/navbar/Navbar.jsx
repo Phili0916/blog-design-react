@@ -1,8 +1,10 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './navbar.css'
 import profilePicture from '../../images/prof_image.jpg'
 
 const Navbar = () => {
+  const user = false;
   return (
     <div className='nav'>
         <div className='navLeft'>
@@ -12,15 +14,67 @@ const Navbar = () => {
         </div>
         <div className='navCenter'>
           <ul className="navList">
-            <li className="navListItem">Home</li>
-            <li className="navListItem">About</li>
-            <li className="navListItem">Contact</li>
-            <li className="navListItem">Write</li>
-            <li className="navListItem">Logout</li>
+            <li className="navListItem">
+              <Link 
+                to="/"
+                style={{textDecoration:"none", color:"inherit"}}
+              >
+                Home
+              </Link>
+            </li>
+            <li className="navListItem">
+            <Link 
+                to="/about"
+                style={{textDecoration:"none", color:"inherit"}}
+              >
+                About
+              </Link>  
+            </li>
+            <li className="navListItem">
+            <Link 
+                to="/contact"
+                style={{textDecoration:"none", color:"inherit"}}
+              >
+                Contact
+              </Link>  
+            </li>
+            <li className="navListItem">
+              <Link 
+                  to="/write"
+                  style={{textDecoration:"none", color:"inherit"}}
+                >
+                  Write
+                </Link>  
+            </li>
+            <li className="navListItem">
+              {user && "Logout"}
+            </li>
           </ul>
         </div>
         <div className='navRight'>
-          <img className="navImage" src={profilePicture} alt="profile"/>
+          { user ? (
+            <img className="navImage" src={profilePicture} alt="profile"/>
+          ) : (
+            <ul className='navList'>
+              <li className='navListItem'>
+                <Link 
+                  to="/login"
+                  style={{textDecoration:"none", color:"inherit"}}
+                >
+                  Login
+                </Link> 
+              </li>
+              <li className='navListItem'>
+                <Link 
+                  to="/register"
+                  style={{textDecoration:"none", color:"inherit"}}
+                >
+                  Register
+                </Link> 
+              </li>
+            </ul>
+                )}
+
           <i className=" navSearchIcon fa-solid fa-magnifying-glass"></i>
         </div>
     </div>

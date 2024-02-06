@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Link} from 'react-router-dom'
 import './navbar.css'
 import profilePicture from '../../images/prof_image.jpg'
+import { AuthContext } from '../../context/authContext'
 
 const Navbar = () => {
-  const user = false;
+
+  const {currentUser, logout} = useContext(AuthContext)
+
   return (
     <div className='nav'>
         <div className='navLeft'>
@@ -47,13 +50,16 @@ const Navbar = () => {
                 </Link>  
             </li>
             <li className="navListItem">
-              {user && "Logout"}
+              {currentUser ? (<span onClick={logout}>Logout</span>) : (null)}
             </li>
           </ul>
         </div>
         <div className='navRight'>
-          { user ? (
+          { currentUser ? (
+            <>
             <img className="navImage" src={profilePicture} alt="profile"/>
+            <span className="navCurrentUser">Hello {currentUser?.username}</span>
+            </>
           ) : (
             <ul className='navList'>
               <li className='navListItem'>

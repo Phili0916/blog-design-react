@@ -46,6 +46,18 @@
     font-weight: 600;
 }
 
+.loginErrorMessage {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+}
+
 .loginRegisterButton {
     position: absolute;
     top: 60px;
